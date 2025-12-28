@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: price-forecast-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn price_forecasting_project.wsgi:application
